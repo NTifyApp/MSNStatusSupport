@@ -1,3 +1,7 @@
 {
-  "main": "com.spotifyxp.msnstatus.Initiator"
+  "main": "com.spotifyxp.msnstatus.Initiator",
+  "author": "Werwolf2303",
+  "name": "MSNStatusSupport",
+  "dependencies": [
+  ]
 }
