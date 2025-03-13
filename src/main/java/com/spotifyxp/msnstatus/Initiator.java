@@ -5,6 +5,7 @@ import com.spotifyxp.events.EventSubscriber;
 import com.spotifyxp.events.Events;
 import com.spotifyxp.events.SpotifyXPEvents;
 import com.spotifyxp.injector.InjectorInterface;
+import com.spotifyxp.manager.InstanceManager;
 import com.spotifyxp.msnstatus.msn.MSNStatus;
 
 public class Initiator implements InjectorInterface {
@@ -28,7 +29,7 @@ public class Initiator implements InjectorInterface {
         Events.subscribe(SpotifyXPEvents.onFrameReady.getName(), new EventSubscriber() {
             @Override
             public void run(Object... data) {
-                PublicValues.spotifyplayer.addEventsListener(new PlayerListener());
+                InstanceManager.getSpotifyPlayer().addEventsListener(new PlayerListener());
                 Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
                     public void run() {
                         MSNStatus.clear();
