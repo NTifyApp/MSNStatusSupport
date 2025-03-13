@@ -1,7 +1,11 @@
 {
   "main": "com.spotifyxp.msnstatus.Initiator",
-  "author": "Werwolf2303",
   "name": "MSNStatusSupport",
+  "author": "Werwolf2303",
+  "version": "0.0.2",
+  "description": "Provides support for the MSNStatus of the Windows Live Messenger",
+  "identifier": "e8a16938-26e5-4d60-9c61-cf0ee42a3900",
+  "minversion": "adb22cb",
   "dependencies": [
   ]
 }
