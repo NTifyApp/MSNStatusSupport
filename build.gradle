@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'de.werwolf2303.spotifyxp'
+group = 'de.werwolf2303.NTify'
 version = '1.0-SNAPSHOT'
 
 sourceCompatibility = '1.8'
@@ -16,15 +16,15 @@ repositories {
 dependencies {
     implementation 'net.java.dev.jna:jna:4.5.2'
     implementation 'net.java.dev.jna:jna-platform:4.5.2'
-    def dir = file("../SpotifyXP")
-    def repo_jar_file = file("../SpotifyXP.jar")
+    def dir = file("../NTify")
+    def repo_jar_file = file("../NTify.jar")
     if (dir.exists() && dir.isDirectory()) {
-        compileOnly files("${projectDir}/../SpotifyXP/target/SpotifyXP.jar")
+        compileOnly files("${projectDir}/../NTify/target/NTify.jar")
     } else {
         if (repo_jar_file.exists() && !repo_jar_file.isDirectory()) {
             compileOnly files(repo_jar_file)
         }else {
-            compileOnly files("${projectDir}/SpotifyXP/target/SpotifyXP.jar")
+            compileOnly files("${projectDir}/NTify/target/NTify.jar")
         }
     }
 }
